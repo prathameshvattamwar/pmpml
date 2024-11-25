@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <link rel="stylesheet" href="help.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <p class="navbar-title">FAQs</p>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-category">
+            <h3 class="category-title">General</h3>
+            <ul class="faq-list">
+                <li>
+                    <div class="faq-question">
+                        <span>I am unable to verify my phone number.</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Phone number verification is not required to use the app at this time.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="category-title">Bus</h3>
+            <ul class="faq-list">
+                <li>
+                    <div class="faq-question">
+                        <span>How many buses are trackable?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, 1,200 buses are trackable. Additional buses are being added daily.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-question">
+                        <span>What is the frequency of location updates?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Location updates are refreshed every 30 seconds.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-question">
+                        <span>Why is no bus showing on the app in my area?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>This may occur due to connectivity issues or if no buses are active in your area.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="category-title">Pass</h3>
+            <ul class="faq-list">
+                <li>
+                    <div class="faq-question">
+                        <span>Can I book a pass in advance?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, passes can be booked up to 7 days in advance.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-question">
+                        <span>My transaction is completed, but the pass is still showing as pending. What should I do?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Please wait for a few minutes. If the issue persists, contact support.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="category-title">Tickets</h3>
+            <ul class="faq-list">
+                <li>
+                    <div class="faq-question">
+                        <span>What is the validity of a ticket?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tickets are valid for 24 hours from the time of booking.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-question">
+                        <span>Can I book a ticket in advance?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, tickets can be booked up to 48 hours in advance.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="raise-complaint-btn">Raise New Complaint</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-nav">
+            <a href="index.html" class="footer-link">
+                <i class="fas fa-home"></i>
+                <p>Home</p>
+            </a>
+            <a href="buses.html" class="footer-link">
+                <i class="fas fa-bus"></i>
+                <p>Buses</p>
+            </a>
+            <a href="help.html" class="footer-link active">
+                <i class="fas fa-question-circle"></i>
+                <p>Help</p>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle FAQ answers
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.classList.replace('fa-minus', 'fa-plus');
+                } else {
+                    answer.style.display = 'block';
+                    icon.classList.replace('fa-plus', 'fa-minus');
+                }
+            });
+        });
+
+        document.querySelectorAll('.faq-list li').forEach((faqItem) => {
+        faqItem.addEventListener('click', () => {
+                faqItem.classList.toggle('active'); // Toggle active state
+            });
+        });
+
+    </script>
+</body>
+</html>

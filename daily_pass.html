@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Pass</title>
+    <link rel="stylesheet" href="daily_pass.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <p class="navbar-title">Daily Pass</p>
+        <p class="countdown">5:00</p>
+    </header>
+
+    <!-- Main Section -->
+    <section id="ticket-card">
+        <!-- Green Header -->
+        <div class="card-header">
+            <p>23 Nov, 2024 | 02:54 PM</p>
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body">
+            <!-- Pass Type Section -->
+            <div class="pass-section">
+                <p class="section-title">Select pass type</p>
+                <div class="pass-options">
+                    <button class="pass-option">Only PMC – ₹40.0</button>
+                    <button class="pass-option">Only PCMC – ₹40.0</button>
+                    <button class="pass-option">PMC and PCMC – ₹50.0</button>
+                    <button class="pass-option">All Routes – ₹120.0</button>
+                </div>
+                <div class="info-box">
+                    <p>Only valid in PMC routes.</p>
+                </div>
+            </div>
+
+            <div class="dotted-divider"></div>
+
+            <!-- Aadhar/Pan Input Section -->
+            <div class="id-input-section">
+                <p>Enter last 4 digits of your Aadhar Card or Pan Card</p>
+                <div class="id-input-container">
+                    <input type="text" class="id-input" maxlength="1" placeholder="X">
+                    <input type="text" class="id-input" maxlength="1" placeholder="X">
+                    <input type="text" class="id-input" maxlength="1" placeholder="X">
+                    <input type="text" class="id-input" maxlength="1" placeholder="X">
+                </div>
+                <div class="info-box alert">
+                    <p>You should have a valid ID with above details.</p>
+                </div>
+            </div>
+
+            <!-- Amount Payable Section -->
+            <div class="amount-section">
+                <p>AMOUNT PAYABLE</p>
+                <p id="amount">₹40.0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment-section">
+        <div class="payment-dropdown">
+            <label for="payment-method">PAY USING</label>
+            <select id="payment-method">
+                <option>PhonePe</option>
+                <option>Google Pay</option>
+                <option>Amazon Pay</option>
+                <option>Bharat Pay</option>
+            </select>
+        </div>
+        <button class="pay-btn">Pay</button>
+    </section>
+
+    <script>
+        document.querySelectorAll('.id-input').forEach((input, index, inputs) => {
+            input.addEventListener('input', () => {
+                if (input.value.length === input.maxLength && inputs[index + 1]) {
+                    inputs[index + 1].focus(); // Move to the next input
+                }
+            });
+        
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && input.value === '' && inputs[index - 1]) {
+                    inputs[index - 1].focus(); // Move to the previous input on Backspace
+                }
+            });
+        });
+
+        //Payable amount hide show script
+        const passOptions = document.querySelectorAll('.pass-option'); // All pass options
+        const amountSection = document.querySelector('.amount-section'); // Amount payable section
+        const amountDisplay = document.getElementById('amount'); // Amount value display
+
+        // Hide the amount section initially
+        amountSection.style.display = 'none';
+
+        // Add click event listeners to each pass option
+        passOptions.forEach((option) => {
+            option.addEventListener('click', () => {
+                // Highlight the selected option
+                passOptions.forEach((opt) => opt.classList.remove('selected'));
+                option.classList.add('selected');
+
+                // Extract and display the amount from the option text
+                const selectedAmount = option.textContent.match(/₹[0-9.]+/)[0]; // Regex to get the amount
+                amountDisplay.textContent = selectedAmount;
+
+                // Show the amount section
+                amountSection.style.display = 'flex';
+            });
+        });
+    </script>
+
+    <script>
+        let timer = 300; // 300 seconds (5 minutes)
+        const countdown = document.querySelector('.countdown');
+    
+        const interval = setInterval(() => {
+            const minutes = Math.floor(timer / 60);
+            const seconds = timer % 60;
+            countdown.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            timer--;
+    
+            if (timer < 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

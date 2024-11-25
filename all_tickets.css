@@ -1,0 +1,121 @@
+/* Import Google Font: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+/* Body Styling */
+body {
+    background: #121212;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    background: #1f1f1f;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .back-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.tickets-section {
+    padding: 20px;
+}
+
+/* Ticket Card Design */
+.ticket-card {
+    background: #1f1f1f;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.ticket-card:hover {
+    border-color: #2b8a3e;
+    transform: scale(1.01); /* Slight zoom effect */
+}
+
+/* Header Section for Each Ticket */
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.route-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.route-info p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.status {
+    background: #2b8a3e;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.failed {
+    background: #ff4d4d;
+}
+
+/* Ticket Body Section */
+.ticket-body {
+    padding: 10px 0;
+}
+
+.ticket-body p {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.ticket-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ticket-footer p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.status2{
+    display: flex;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.location{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 12px;
+}

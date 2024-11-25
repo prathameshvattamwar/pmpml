@@ -1,0 +1,172 @@
+/* Import Google Font: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+a{
+    color: #fff;
+}
+
+/* Body Styling */
+body {
+    background: #121212;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    background: #1f1f1f;
+    color: white;
+}
+
+.navbar-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile-icon {
+    background: #1f1f1f;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.update-text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Options Section */
+.options-section {
+    margin: 20px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+}
+
+.option i {
+    font-size: 20px;
+    color: #ffffff;
+    margin-right: 15px;
+}
+
+.option p {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    text-align: left;
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    width: 100%;
+    bottom: 65px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.social-links i {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.app-version {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Bottom Navigation Bar */
+#bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f1f1f;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #333;
+}
+
+.nav-item {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    flex: 1;
+}
+
+.nav-item i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.nav-item p {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .option p {
+        font-size: 14px;
+    }
+
+    #bottom-nav {
+        padding: 10px;
+    }
+
+    .nav-item i {
+        font-size: 18px;
+    }
+
+    .nav-item p {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tickets</title>
+    <link rel="stylesheet" href="/static/css/all_tickets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <p class="navbar-title">All Tickets</p>
+    </header>
+
+    <!-- Tickets Section -->
+    <section class="tickets-section">
+        <!-- Ticket Card -->
+        <div class="ticket-card" onclick="location.href='view_ticket.html';">
+            <div class="ticket-header">
+                <div class="route-info">
+                    <i class="fas fa-bus"></i>
+                    <p>15</p>
+                </div>
+                <span class="status success">Success</span>
+            </div>
+            <div class="ticket-body">
+                <p class="location">Kalubai Mandir Ramtekdi → IBM</p>
+                <div class="ticket-footer">
+                    <p>2024-11-14 13:00:25</p>
+                    <div class="status2">
+                        <p>1F =</p>
+                        <p>₹15</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat ticket cards for other tickets -->
+        <div class="ticket-card" onclick="location.href='view_ticket.html';">
+            <div class="ticket-header">
+                <div class="route-info">
+                    <i class="fas fa-bus"></i>
+                    <p>139</p>
+                </div>
+                <span class="status success">Success</span>
+            </div>
+            <div class="ticket-body">
+                <p class="location">15 Number → Fatima Nagar</p>
+                <div class="ticket-footer">
+                    <p>2024-11-16 20:00:31</p>
+                    <div class="status2">
+                        <p>4F =</p>
+                        <p>₹40</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

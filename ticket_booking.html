@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" href="ticket_booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <p class="navbar-title">Ticket Details</p>
+        <p class="countdown">5:00</p>
+    </header>
+
+    <!-- Main Section -->
+    <section id="ticket-card">
+        <!-- Green Header -->
+        <div class="card-header">
+            <p>23 Nov, 2024 | 02:54 PM</p>
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body">
+            <!-- Top Section -->
+            <div class="route-selection">
+                <i class="fas fa-bus bus-icon"></i>
+                <input type="text" placeholder="Select or enter route" class="route-input">
+            </div>
+            <hr class="section-divider">
+
+            <!-- Middle Section -->
+            <div class="stops">
+                <div class="stop">
+                    <input type="radio" id="starting" name="stop">
+                    <label for="starting">Starting stop</label>
+                </div>
+                <div class="dotted-line">
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                </div>
+                <div class="stop">
+                    <input type="radio" id="ending" name="stop">
+                    <label for="ending">Ending stop</label>
+                </div>
+            </div>
+            <div class="dotted-divider"></div>
+
+            <!-- Buttons -->
+            <div class="fare-buttons">
+                <button class="fare-btn active">By Fare</button>
+                <button class="fare-btn">By Ending Stop</button>
+            </div>
+
+            <!-- Ticket Section -->
+            <div class="ticket-selection">
+                <p>Ticket Price</p>
+                <p>Select Tickets</p>
+                <div class="ticket-type">
+                    <p>Full</p>
+                    <div class="counter">
+                        <button class="counter-btn minus" data-ticket="full">-</button>
+                        <p class="counter-value" id="full-ticket">1</p>
+                        <button class="counter-btn plus" data-ticket="full">+</button>
+                    </div>
+                </div>
+                <div class="ticket-type">
+                    <p>Half</p>
+                    <div class="counter">
+                        <button class="counter-btn minus" data-ticket="half">-</button>
+                        <p class="counter-value" id="half-ticket">0</p>
+                        <button class="counter-btn plus" data-ticket="half">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment-section">
+        <div class="payment-dropdown">
+            <label for="payment-method">PAY USING</label>
+            <select id="payment-method">
+                <option>PhonePe</option>
+                <option>Google Pay</option>
+                <option>Amazon Pay</option>
+                <option>Bharat Pay</option>
+            </select>
+        </div>
+        <button class="pay-btn">Pay</button>
+    </section>
+
+
+    <script>
+        let timer = 300; // 300 seconds (5 minutes)
+        const countdown = document.querySelector('.countdown');
+    
+        const interval = setInterval(() => {
+            const minutes = Math.floor(timer / 60);
+            const seconds = timer % 60;
+            countdown.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            timer--;
+    
+            // Redirect to home page when timer reaches 0
+            if (timer < 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+    
+</body>
+</html>

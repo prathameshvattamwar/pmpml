@@ -1,0 +1,198 @@
+/* Import Google Font: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+/* Body Styling */
+body {
+    background: #121212;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+    background: #1f1f1f;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-bottom: 1px solid #333;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2b8a3e;
+    margin-bottom: 10px;
+}
+
+.faq-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.faq-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #1f1f1f;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.faq-list li:hover {
+    background: #2b8a3e;
+    color: white;
+}
+
+.raise-complaint-btn {
+    background: #2b8a3e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.raise-complaint-btn:hover {
+    background: #1e7a34;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #1c1c1c;
+    padding: 10px 0;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer p{
+    font-size: 14px;
+}
+
+.footer-link {
+    text-align: center;
+    color: white;
+    flex: 1;
+    font-size: 12px;
+}
+
+.footer-link i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-link.active {
+    color: #2b8a3e;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* FAQ Question and Icon */
+.faq-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #1f1f1f;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    position: relative; /* Allows proper positioning of the icon */
+}
+
+/* Fix the Position of the Plus Icon */
+.faq-question i {
+    margin-left: auto; /* Push the icon to the far right */
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+/* Rotate the Plus Icon When Active */
+.faq-list li.active .faq-question i {
+    transform: rotate(0deg);
+}
+
+/* FAQ Answer Styling */
+.faq-answer {
+    display: none; /* Initially hidden */
+    padding: 10px 15px;
+    background: #2b2b2b;
+    border-radius: 5px;
+    margin-top: 5px; /* Space between question and answer */
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5; /* Ensure proper line spacing */
+    width: 100%; /* Ensure the answer spans the full width */
+}
+
+/* Show Answer on Expansion */
+.faq-list li.active .faq-answer {
+    display: block; /* Show when the question is active */
+    margin-top: 10px;
+}
+
+/* Hover Effect for Questions */
+.faq-list li:hover {
+    background: #2b8a3e;
+    color: white;
+}
+
+/* Adjustments for Plus Icon Alignment */
+.faq-list li {
+    padding-right: 20px; /* Add padding to the right side for the icon */
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure it spans the full width */
+}
+
+/* General FAQ Section Adjustments */
+.faq-section {
+    padding: 20px;
+}
+
+.category-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2b8a3e;
+    margin-bottom: 10px;
+}

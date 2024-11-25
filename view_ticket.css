@@ -1,0 +1,128 @@
+/* Import Google Font: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #121212;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #1f1f1f;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.close-btn {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.all-tickets-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Ticket Section */
+.ticket {
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #868686;
+    position: relative;
+}
+
+.ticket-header {
+    text-align: center;
+    padding: 10px;
+    background: #d32f2f; /* Red header */
+    color: #ffffff;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 16px;
+}
+
+.ticket-body {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.divider {
+    margin: 10px 0;
+    border-top: 1px dashed #ffffff;
+}
+
+.route {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.ticket-id {
+    text-align: center;
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-top: 15px;
+}
+
+/* Ticket Footer */
+.ticket-footer {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Stamp Animation */
+.stamp-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.stamp-image {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    animation: zoom-in-out 2s infinite ease-in-out;
+    margin-bottom: 25px;
+}
+
+/* Keyframes for Zoom Animation */
+@keyframes zoom-in-out {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}

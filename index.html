@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aapli PMPML</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="about.html">
+                <img src="logo.png" alt="PMPML Logo">
+            </a>
+        </div>
+
+        <div class="nav-icons">
+            <a href="notifications.html" class="notify-link">
+                <i class="fas fa-bell notify"></i>
+            </a>
+            <a href="my_profile.html" class="profile-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <section id="search">
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="कुठे जायचे आहे?">
+        </div>
+    </section>
+
+    <!-- Main Options -->
+    <section id="options">
+
+        <div class="row">
+            <div class="option-card">
+                <a href="ticket_booking.html">
+                    <i class="fas fa-ticket-alt"></i>
+                    <p>Bus Ticket</p>
+                </a>
+            </div>
+
+            <div class="option-card">
+                <a href="daily_pass.html">
+                    <i class="fas fa-passport"></i>
+                    <p>Daily Pass</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="option-card square">
+                <a href="all_tickets.html">
+                    <i class="fas fa-ticket-alt"></i>
+                    <p>View Ticket</p>
+                </a>
+            </div>
+            <div class="option-card square">
+                <i class="fas fa-id-card"></i>
+                <p>View Pass</p>
+            </div>
+            <div class="option-card square">
+                <i class="fas fa-route"></i>
+                <p>Route Timetable</p>
+            </div>
+            <div class="option-card square">
+                <a href="https://www.punemetrorail.org/" target="_blank">
+                    <i class="fas fa-train"></i>
+                    <p>Metro Ticket</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Near Me Section -->
+    <section id="near-me">
+        <div class="title-row">
+            <p class="title">Near Me</p>
+            <p class="show-all">Show All</p>
+        </div>
+        <div class="bus-stop">
+            <p><i class="fas fa-bus"></i>&nbsp;<strong>Ganga Nagar Saswad Road Bus Stop</strong></p>
+            <p class="away"><small>- 122 m away</small></p>
+        </div>
+        <button class="see-more"><i class="fas fa-bus"></i> See More Buses</button>
+    </section>
+
+    <!-- Nearby Section -->
+    <section id="nearby">
+        <h3>Nearby</h3>
+        <div class="map-placeholder">
+            <p>Google Map</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-menu">
+            <div class="menu-item active">
+                <i class="fas fa-home"></i>
+                <p>Home</p>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-bus"></i>
+                <p>Buses</p>
+            </div>
+            <div class="menu-item">
+                <a href="help.html">
+                    <i class="fas fa-question-circle"></i>
+                </a>
+                <p>Help</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

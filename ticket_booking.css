@@ -1,0 +1,291 @@
+/* Import Google Font: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+a{
+    color: #fff;
+}
+
+/* Body Styling */
+body {
+    background: #121212;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #1f1f1f;
+    color: white;
+}
+
+.back-btn {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.countdown {
+    font-size: 14px;
+    color: #00ff00;
+    font-weight: 500;
+}
+
+/* Card Header */
+.card-header {
+    background: #2b8a3e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Card Body */
+.card-body {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Route Selection Section */
+.route-selection {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bus-icon {
+    font-size: 24px;
+    color: #2b8a3e;
+}
+
+.route-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Stops Section */
+.stops {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stop label {
+    color: white;
+    font-size: 14px;
+}
+
+.stop .radio-circle {
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.stop input[type="radio"]:checked + .radio-circle::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #2b8a3e;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+/* Separator Lines */
+.section-divider {
+    border: none;
+    border-top: 1px solid #ffffff;
+    margin: 10px 0;
+}
+
+.dotted-divider {
+    border: none;
+    border-top: 1px dotted #ffffff;
+    margin: 10px 0;
+}
+
+/* Fare Buttons */
+.fare-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.fare-btn {
+    flex: 1;
+    padding: 10px;
+    background: #2b8a3e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.fare-btn.active {
+    background: #1f7a34;
+}
+
+/* Ticket Section */
+.ticket-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.ticket-type p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.counter-btn {
+    background: #333;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.counter-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* Payment Section */
+#payment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f1f1f;
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #333;
+}
+
+.payment-dropdown {
+    flex: 1;
+    margin-right: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.payment-dropdown select {
+    width: 100%;
+    background: #232323;
+    border: 1px solid #333;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.pay-btn {
+    background: #2b8a3e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: translateY(10px);
+}
+
+.dotted-line{
+    display: flex;
+    flex-direction: column;
+    padding-left: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-body {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .fare-buttons {
+        gap: 10px;
+    }
+
+    .fare-btn {
+        margin: 0;
+        padding: 8px;
+    }
+
+    .navbar {
+        padding: 8px 15px;
+    }
+
+    .countdown {
+        font-size: 12px;
+    }
+
+    #payment-section {
+        gap: 10px;
+    }
+
+    .pay-btn {
+        width: 50%;
+        text-align: center;
+        transform: translateY(10px);
+    }
+}

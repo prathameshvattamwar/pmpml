@@ -1,0 +1,246 @@
+/* Import Google Font: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #121212;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #1f1f1f;
+    color: white;
+}
+
+.back-btn {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.countdown {
+    font-size: 14px;
+    color: #00ff00;
+    font-weight: 500;
+}
+
+/* Card Header */
+
+#ticket-card{
+    padding-bottom: 100px;
+}
+
+.card-header {
+    background: #2b8a3e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Card Body */
+.card-body {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Pass Options */
+.pass-section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pass-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pass-option {
+    background: #333;
+    color: white;
+    padding: 10px;
+    width: fit-content;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pass-option:hover {
+    background: #2b8a3e;
+    color: white;
+}
+
+/* Info Box */
+.info-box {
+    background: #16243f;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.info-box.alert {
+    background: #16243f;
+    color: #ffa500; /* Orange for alerts */
+}
+
+/* Dotted Divider */
+.dotted-divider {
+    border: none;
+    border-top: 1px dotted #ffffff;
+    margin: 20px 0;
+}
+
+/* ID Input Section */
+.id-input-container {
+    display: flex;
+    justify-content: space-between; /* Distribute inputs with equal space */
+    gap: 15px; /* Adjust spacing between the inputs */
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: transparent;
+    width: 250px; /* Increase the container width */
+    margin: 10px auto;
+    position: relative;
+    max-width: 100%;
+}
+
+.id-input {
+    background: transparent;
+    border: none; /* Remove individual borders */
+    padding: 0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    width: 35px; /* Fixed width for each input */
+    outline: none;
+}
+
+.id-input::placeholder {
+    color: white;
+    opacity: 0.5; /* Placeholder with reduced opacity */
+}
+
+.id-input-container:focus-within {
+    border-color: #2b8a3e; /* Change border color on focus */
+}
+
+/* Add a visual connection for the "single box" look */
+.id-input-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+/* Amount Section */
+.amount-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Payment Section */
+#payment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f1f1f;
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #333;
+}
+
+.payment-dropdown select {
+    width: 100%;
+    background: #232323;
+    border: 1px solid #333;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.pay-btn {
+    background: #2b8a3e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: translateY(10px);
+}
+
+.pass-option.selected {
+    background: #2b8a3e;
+    color: white;
+    border: 1px solid #2b8a3e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-body {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #payment-section {
+        gap: 10px;
+    }
+
+    .pay-btn {
+        width: 50%;
+        transform: translateY(10px);
+    }
+}

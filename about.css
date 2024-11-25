@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Styling */
+body {
+    background: #121212;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #1f1f1f;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.back-btn {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 9;
+}
+
+.navbar-title {
+    text-align: center;
+    flex-grow: 1;
+    margin-left: -30px;
+}
+
+/* About Content */
+.about-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2b8a3e;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.about-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    font-size: 14px;
+    margin: 5px 0;
+    background: #1f1f1f;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+/* About Developer Section */
+.about-developer {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-developer h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2b8a3e;
+}
+
+.about-developer p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #2b8a3e;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f;
+    font-size: 14px;
+    color: #aaaaaa;
+    margin-top: 40px;
+}
