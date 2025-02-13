@@ -3,7 +3,8 @@
 <br>
 <br>
 
-<h3>Here are some of the project preview images</h3>
+<h3>Project Preview</h3>
+<br>
 <img src="https://i.imgur.com/2OTyThR.png" />
 <br>
 <img src="https://i.imgur.com/fRqr3NA.png" />
